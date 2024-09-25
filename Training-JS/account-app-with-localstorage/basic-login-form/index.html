@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="login-form">
+        <h1>Login</h1>
+        <form id="form">
+            <div class="input" style="display: grid;">
+            <label>Username</label>
+            <input placeholder="Enter Username" id="username" oninput="validateUsername()"></input>
+            <div id="username-error">Invalid username format</div>
+            
+            <label>Password</label>
+            <input placeholder="Enter Password" type="password" id="password" oninput="validatePassword()"></input>
+            <div id="password-error">Invalid password format</div>
+            </div>
+
+            <div id="checkbox">
+            <input type="checkbox" class="login_checkbox" id="remember-me">  Remember me</input>
+            </div>
+            <button type="submit" onclick="login()" id="loginButton" disabled>Login</button>
+        </form>
+    </div>
+    <script src="../basic-login-form/javascript/RefactorMain.js"></script>
+</body>
+</html>

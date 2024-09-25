@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div id="container">
+        <form id="frm-register">
+            <h2>REGISTRATION FORM</h2>
+            <div class="center">
+                <div class="inputName">
+                    <label for="name">Name</label>
+                    <div class="firstName">
+                        <input type="text" id="firstName" oninput="validateFirstName()" required>
+                        <p id="firstName-label">First Name</p>
+                        <div id="firstName-error">Invalid firstname format</div>
+                    </div>
+                    <div class="lastName">
+                        <input type="text" id="lastName" oninput="validateLastName()" required>
+                        <p id="lastName-label">Last Name</p>
+                        <div id="lastName-error">Invalid lastname format</div>
+                    </div>
+                </div>
+                <div class="account">
+                    <label for="account">Account</label>
+                    <input id="accountName" type="text" oninput="validateAccountName()" required>
+                </div>
+                <div id="accountName-error">Invalid account name format</div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" oninput="validatePassword()" required>
+                </div>
+                <div id="password-error">Invalid password format</div>
+                <div class="confirmPassword">
+                    <label for="confirmPassword">ConfirmPassword</label>
+                    <input id="confirmPassword" type="password" oninput="validateConfirmPassword()" required>
+                    <span id="message"></span>
+                </div>
+                <div id="confirmPassword-error">Invalid confirm password format</div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="example@example.com" oninput="validateEmail()" required>
+                </div>
+                <div id="email-error">Invalid email format</div>
+                <div class="phone">
+                    <label for="phone">Phone</label>
+                    <div class="area">
+                        <input id="areaCodeip" type="number" oninput="validateAreaCode()" required>
+                        <p id="areaCode-label">Area Code</p>
+                        <div id="areaCode-error">Invalid area code format</div>
+                    </div>
+                    <div class="phoneNumber">
+                        <input id="inputNumber" type="number" oninput="validatePhoneNumber()" required>
+                        <p id="phoneNumber-label">Phone Number</p>
+                        <div id="phoneNumber-error">Invalid phone number format</div>
+                    </div>
+                </div>
+                <div class="selection">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject" required onchange="changeSubject()">
+                        <option value="" disabled selected hidden>Choose Option</option>
+                        <option value="Student">Student</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Trainer">Trainer</option>
+                    </select>
+                </div>
+                <label class="question">Are you an existing customer?</label>
+                <div class="isExist">
+                    <input type="radio" id="yes" name="choice" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="choice" value="no">
+                    <label for="no">No</label>
+                </div>
+                <button type="submit" id="registerButton">REGISTER</button>
+                <div id="confirmationMessage" style="display: none;">
+                    <p>Your account was created successfully!</p>
+                    <button id="closeMessage">OK</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
